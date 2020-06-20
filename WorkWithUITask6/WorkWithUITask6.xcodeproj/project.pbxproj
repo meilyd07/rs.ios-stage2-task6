@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		955FE3D5249CFB85001B7FCB /* IconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955FE3D4249CFB85001B7FCB /* IconViewController.m */; };
+		955FE3D8249CFC05001B7FCB /* IconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 955FE3D7249CFC05001B7FCB /* IconView.m */; };
 		95614D8A249BEA1200D65D0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95614D89249BEA1200D65D0C /* AppDelegate.m */; };
-		95614D90249BEA1200D65D0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95614D8F249BEA1200D65D0C /* ViewController.m */; };
 		95614D95249BEA1300D65D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95614D94249BEA1300D65D0C /* Assets.xcassets */; };
 		95614D98249BEA1300D65D0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95614D96249BEA1300D65D0C /* LaunchScreen.storyboard */; };
 		95614D9B249BEA1300D65D0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95614D9A249BEA1300D65D0C /* main.m */; };
@@ -16,11 +17,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		955FE3D3249CFB85001B7FCB /* IconViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconViewController.h; sourceTree = "<group>"; };
+		955FE3D4249CFB85001B7FCB /* IconViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconViewController.m; sourceTree = "<group>"; };
+		955FE3D6249CFC05001B7FCB /* IconView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconView.h; sourceTree = "<group>"; };
+		955FE3D7249CFC05001B7FCB /* IconView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconView.m; sourceTree = "<group>"; };
 		95614D85249BEA1200D65D0C /* WorkWithUITask6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkWithUITask6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95614D88249BEA1200D65D0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		95614D89249BEA1200D65D0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		95614D8E249BEA1200D65D0C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		95614D8F249BEA1200D65D0C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		95614D94249BEA1300D65D0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95614D97249BEA1300D65D0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95614D99249BEA1300D65D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,9 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				95614D88249BEA1200D65D0C /* AppDelegate.h */,
+				955FE3D6249CFC05001B7FCB /* IconView.h */,
+				955FE3D7249CFC05001B7FCB /* IconView.m */,
 				95614D89249BEA1200D65D0C /* AppDelegate.m */,
-				95614D8E249BEA1200D65D0C /* ViewController.h */,
-				95614D8F249BEA1200D65D0C /* ViewController.m */,
+				955FE3D3249CFB85001B7FCB /* IconViewController.h */,
+				955FE3D4249CFB85001B7FCB /* IconViewController.m */,
 				95614D94249BEA1300D65D0C /* Assets.xcassets */,
 				95614D96249BEA1300D65D0C /* LaunchScreen.storyboard */,
 				95614D99249BEA1300D65D0C /* Info.plist */,
@@ -142,9 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95614D90249BEA1200D65D0C /* ViewController.m in Sources */,
+				955FE3D5249CFB85001B7FCB /* IconViewController.m in Sources */,
 				95614DA6249C0CF500D65D0C /* UIColor+HexColors.m in Sources */,
 				95614D8A249BEA1200D65D0C /* AppDelegate.m in Sources */,
+				955FE3D8249CFC05001B7FCB /* IconView.m in Sources */,
 				95614D9B249BEA1300D65D0C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
