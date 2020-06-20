@@ -9,6 +9,9 @@
 #import "IconViewController.h"
 #import "IconView.h"
 #import "UIColor+HexColors.h"
+#import "InfoListViewController.h"
+#import "GalleryViewController.h"
+#import "PhoneInfoViewController.h"
 
 int const ICON_SIZE = 70;
 int const LEFT_MARGIN = 55;
@@ -37,6 +40,7 @@ int const BUTTON_HEIGHT = 55;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     //start animation circle todo
 }
 
@@ -62,10 +66,30 @@ int const BUTTON_HEIGHT = 55;
     [self.startButton setTitleColor:[UIColor customBlack] forState:UIControlStateNormal];
     [self.startButton.titleLabel setFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
     
-    //[playButton addTarget:self action:@selector(playAction:) forControlEvents:UIControlEventTouchUpInside];
-    self.startButton.layer.cornerRadius = 10; // this value vary as per your desire
+    [self.startButton addTarget:self action:@selector(startAction:) forControlEvents:UIControlEventTouchUpInside];
+    self.startButton.layer.cornerRadius = 10;
     self.startButton.clipsToBounds = YES;
     [self.view addSubview:self.startButton];
+}
+
+-(void)startAction:(UIButton *)button {
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    UIViewController *infoListVC = [[InfoListViewController alloc] init];
+    UIViewController *galleryVC = [[GalleryViewController alloc] init];
+    UIViewController *phoneInfoVC = [[PhoneInfoViewController alloc] init];
+    NSArray *viewControllers = [NSArray arrayWithObjects:infoListVC, galleryVC, phoneInfoVC, nil];
+    [tabBarController setViewControllers:viewControllers animated:NO];
+    
+    infoListVC.tabBarItem.image = [UIImage imageNamed:@"info_unselected"];
+    infoListVC.tabBarItem.selectedImage = [UIImage imageNamed:@"info_selected"];
+    galleryVC.tabBarItem.image = [UIImage imageNamed:@"gallery_unselected"];
+    galleryVC.tabBarItem.selectedImage = [UIImage imageNamed:@"gallery_selected"];
+    
+    phoneInfoVC.tabBarItem.image = [UIImage imageNamed:@"home_unselected"];
+    phoneInfoVC.tabBarItem.selectedImage = [UIImage imageNamed:@"home_selected"];
+    
+    [self.navigationController pushViewController:tabBarController animated:true];
 }
 
 - (void)setupIconViews {
