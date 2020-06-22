@@ -67,7 +67,7 @@ int const BUTTON_HEIGHT = 55;
     [self.startButton.titleLabel setFont:[UIFont systemFontOfSize:20 weight:UIFontWeightMedium]];
     
     [self.startButton addTarget:self action:@selector(startAction:) forControlEvents:UIControlEventTouchUpInside];
-    self.startButton.layer.cornerRadius = 10;
+    self.startButton.layer.cornerRadius = BUTTON_HEIGHT / 2;
     self.startButton.clipsToBounds = YES;
     [self.view addSubview:self.startButton];
 }
