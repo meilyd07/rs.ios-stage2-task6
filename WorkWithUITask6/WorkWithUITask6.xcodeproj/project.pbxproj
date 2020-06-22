@@ -15,6 +15,8 @@
 		950D8012249EB1EB00BFD6F5 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950D8010249EB1EB00BFD6F5 /* GalleryViewController.xib */; };
 		950D8016249EB2BF00BFD6F5 /* PhoneInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950D8014249EB2BF00BFD6F5 /* PhoneInfoViewController.m */; };
 		950D8017249EB2BF00BFD6F5 /* PhoneInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950D8015249EB2BF00BFD6F5 /* PhoneInfoViewController.xib */; };
+		950D801B249ED2CB00BFD6F5 /* InfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 950D8019249ED2CB00BFD6F5 /* InfoCell.m */; };
+		950D801C249ED2CB00BFD6F5 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950D801A249ED2CB00BFD6F5 /* InfoCell.xib */; };
 		955FE3D5249CFB85001B7FCB /* IconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955FE3D4249CFB85001B7FCB /* IconViewController.m */; };
 		955FE3D8249CFC05001B7FCB /* IconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 955FE3D7249CFC05001B7FCB /* IconView.m */; };
 		95614D8A249BEA1200D65D0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95614D89249BEA1200D65D0C /* AppDelegate.m */; };
@@ -37,6 +39,9 @@
 		950D8013249EB2BF00BFD6F5 /* PhoneInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneInfoViewController.h; sourceTree = "<group>"; };
 		950D8014249EB2BF00BFD6F5 /* PhoneInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneInfoViewController.m; sourceTree = "<group>"; };
 		950D8015249EB2BF00BFD6F5 /* PhoneInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneInfoViewController.xib; sourceTree = "<group>"; };
+		950D8018249ED2CB00BFD6F5 /* InfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoCell.h; sourceTree = "<group>"; };
+		950D8019249ED2CB00BFD6F5 /* InfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoCell.m; sourceTree = "<group>"; };
+		950D801A249ED2CB00BFD6F5 /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		955FE3D3249CFB85001B7FCB /* IconViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconViewController.h; sourceTree = "<group>"; };
 		955FE3D4249CFB85001B7FCB /* IconViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconViewController.m; sourceTree = "<group>"; };
 		955FE3D6249CFC05001B7FCB /* IconView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconView.h; sourceTree = "<group>"; };
@@ -63,6 +68,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		950D801D249ED2D700BFD6F5 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				950D8018249ED2CB00BFD6F5 /* InfoCell.h */,
+				950D8019249ED2CB00BFD6F5 /* InfoCell.m */,
+				950D801A249ED2CB00BFD6F5 /* InfoCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		95614D7C249BEA1200D65D0C = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +97,7 @@
 		95614D87249BEA1200D65D0C /* WorkWithUITask6 */ = {
 			isa = PBXGroup;
 			children = (
+				950D801D249ED2D700BFD6F5 /* cells */,
 				95614D88249BEA1200D65D0C /* AppDelegate.h */,
 				955FE3D6249CFC05001B7FCB /* IconView.h */,
 				955FE3D7249CFC05001B7FCB /* IconView.m */,
@@ -168,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				950D8012249EB1EB00BFD6F5 /* GalleryViewController.xib in Resources */,
+				950D801C249ED2CB00BFD6F5 /* InfoCell.xib in Resources */,
 				95614D98249BEA1300D65D0C /* LaunchScreen.storyboard in Resources */,
 				950D8008249EA24B00BFD6F5 /* FileInfoViewController.xib in Resources */,
 				950D8017249EB2BF00BFD6F5 /* PhoneInfoViewController.xib in Resources */,
@@ -186,6 +203,7 @@
 				955FE3D5249CFB85001B7FCB /* IconViewController.m in Sources */,
 				950D8011249EB1EB00BFD6F5 /* GalleryViewController.m in Sources */,
 				95614DA6249C0CF500D65D0C /* UIColor+HexColors.m in Sources */,
+				950D801B249ED2CB00BFD6F5 /* InfoCell.m in Sources */,
 				950D8016249EB2BF00BFD6F5 /* PhoneInfoViewController.m in Sources */,
 				950D800C249EA70900BFD6F5 /* InfoListViewController.m in Sources */,
 				95614D8A249BEA1200D65D0C /* AppDelegate.m in Sources */,
@@ -323,7 +341,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WorkWithUITask6/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,6 +352,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = none.WorkWithUITask6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -340,7 +361,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WorkWithUITask6/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -349,6 +372,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = none.WorkWithUITask6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -1,8 +1,8 @@
 //
-//  FileInfoViewController.h
+//  InfoCell.h
 //  WorkWithUITask6
 //
-//  Created by Hanna Rybakova on 6/20/20.
+//  Created by Hanna Rybakova on 6/21/20.
 //  Copyright © 2020 Hanna Rybakova. All rights reserved.
 //
 
@@ -11,8 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FileInfoViewController : UIViewController
-@property (nonatomic, strong) PHAsset *assetItem;
+@interface InfoCell : UITableViewCell
+- (void)configureWithItem:(PHAsset *)item;
 @end
 
 NS_ASSUME_NONNULL_END
