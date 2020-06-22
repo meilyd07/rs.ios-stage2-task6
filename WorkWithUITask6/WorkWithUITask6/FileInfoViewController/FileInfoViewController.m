@@ -8,6 +8,7 @@
 
 #import "FileInfoViewController.h"
 #import "UIColor+HexColors.h"
+#import "PHAsset+URL.h"
 
 int const SHARE_BOTTON_HEIGHT = 55;
 
@@ -96,8 +97,11 @@ int const SHARE_BOTTON_HEIGHT = 55;
 }
 
 -(void)shareAction:(UIButton *)button {
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[self.assetItem] applicationActivities:nil];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[[self.assetItem getFileURLFromPHAssetResourceDescription]] applicationActivities:nil];
+    
     activityVC.excludedActivityTypes = @[UIActivityTypeSaveToCameraRoll];
+    activityVC.modalPresentationStyle = UIModalPresentationPopover;
+    activityVC.popoverPresentationController.sourceView = button;
     [self presentViewController:activityVC animated:YES completion:nil];
 }
 

@@ -89,6 +89,12 @@ int const BUTTON_HEIGHT = 55;
     phoneInfoVC.tabBarItem.image = [UIImage imageNamed:@"home_unselected"];
     phoneInfoVC.tabBarItem.selectedImage = [UIImage imageNamed:@"home_selected"];
     
+    //todo
+    tabBarController.navigationItem.hidesBackButton = YES;
+    
+    infoListVC.navigationItem.title = @"Info";
+
+    
     [self.navigationController pushViewController:tabBarController animated:true];
 }
 

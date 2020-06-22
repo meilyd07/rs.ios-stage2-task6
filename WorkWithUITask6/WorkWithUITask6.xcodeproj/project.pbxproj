@@ -17,6 +17,7 @@
 		950D8017249EB2BF00BFD6F5 /* PhoneInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950D8015249EB2BF00BFD6F5 /* PhoneInfoViewController.xib */; };
 		950D801B249ED2CB00BFD6F5 /* InfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 950D8019249ED2CB00BFD6F5 /* InfoCell.m */; };
 		950D801C249ED2CB00BFD6F5 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950D801A249ED2CB00BFD6F5 /* InfoCell.xib */; };
+		953098E324A16B09006F8C5B /* PHAsset+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = 953098E224A16B09006F8C5B /* PHAsset+URL.m */; };
 		955FE3D5249CFB85001B7FCB /* IconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 955FE3D4249CFB85001B7FCB /* IconViewController.m */; };
 		955FE3D8249CFC05001B7FCB /* IconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 955FE3D7249CFC05001B7FCB /* IconView.m */; };
 		95614D8A249BEA1200D65D0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95614D89249BEA1200D65D0C /* AppDelegate.m */; };
@@ -42,6 +43,8 @@
 		950D8018249ED2CB00BFD6F5 /* InfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoCell.h; sourceTree = "<group>"; };
 		950D8019249ED2CB00BFD6F5 /* InfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoCell.m; sourceTree = "<group>"; };
 		950D801A249ED2CB00BFD6F5 /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
+		953098E124A16B09006F8C5B /* PHAsset+URL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PHAsset+URL.h"; sourceTree = "<group>"; };
+		953098E224A16B09006F8C5B /* PHAsset+URL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+URL.m"; sourceTree = "<group>"; };
 		955FE3D3249CFB85001B7FCB /* IconViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconViewController.h; sourceTree = "<group>"; };
 		955FE3D4249CFB85001B7FCB /* IconViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconViewController.m; sourceTree = "<group>"; };
 		955FE3D6249CFC05001B7FCB /* IconView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconView.h; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 			children = (
 				95614DA4249C0CF500D65D0C /* UIColor+HexColors.h */,
 				95614DA5249C0CF500D65D0C /* UIColor+HexColors.m */,
+				953098E124A16B09006F8C5B /* PHAsset+URL.h */,
+				953098E224A16B09006F8C5B /* PHAsset+URL.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953098E324A16B09006F8C5B /* PHAsset+URL.m in Sources */,
 				955FE3D5249CFB85001B7FCB /* IconViewController.m in Sources */,
 				950D8011249EB1EB00BFD6F5 /* GalleryViewController.m in Sources */,
 				95614DA6249C0CF500D65D0C /* UIColor+HexColors.m in Sources */,
