@@ -71,11 +71,86 @@
 		950D801D249ED2D700BFD6F5 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				9514BDB024A1554600D77D8B /* InfoCell */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		9514BDAB24A1548400D77D8B /* IconViewController */ = {
+			isa = PBXGroup;
+			children = (
+				955FE3D3249CFB85001B7FCB /* IconViewController.h */,
+				955FE3D4249CFB85001B7FCB /* IconViewController.m */,
+			);
+			path = IconViewController;
+			sourceTree = "<group>";
+		};
+		9514BDAC24A154BF00D77D8B /* FileInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				950D8005249EA24B00BFD6F5 /* FileInfoViewController.m */,
+				950D8006249EA24B00BFD6F5 /* FileInfoViewController.xib */,
+				950D8004249EA24B00BFD6F5 /* FileInfoViewController.h */,
+			);
+			path = FileInfoViewController;
+			sourceTree = "<group>";
+		};
+		9514BDAD24A154E300D77D8B /* PhoneInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				950D8013249EB2BF00BFD6F5 /* PhoneInfoViewController.h */,
+				950D8014249EB2BF00BFD6F5 /* PhoneInfoViewController.m */,
+				950D8015249EB2BF00BFD6F5 /* PhoneInfoViewController.xib */,
+			);
+			path = PhoneInfoViewController;
+			sourceTree = "<group>";
+		};
+		9514BDAE24A1550000D77D8B /* GalleryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				950D800E249EB1EB00BFD6F5 /* GalleryViewController.h */,
+				950D800F249EB1EB00BFD6F5 /* GalleryViewController.m */,
+				950D8010249EB1EB00BFD6F5 /* GalleryViewController.xib */,
+			);
+			path = GalleryViewController;
+			sourceTree = "<group>";
+		};
+		9514BDAF24A1551A00D77D8B /* InfoListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				950D8009249EA70900BFD6F5 /* InfoListViewController.h */,
+				950D800A249EA70900BFD6F5 /* InfoListViewController.m */,
+				950D800B249EA70900BFD6F5 /* InfoListViewController.xib */,
+			);
+			path = InfoListViewController;
+			sourceTree = "<group>";
+		};
+		9514BDB024A1554600D77D8B /* InfoCell */ = {
+			isa = PBXGroup;
+			children = (
 				950D8018249ED2CB00BFD6F5 /* InfoCell.h */,
 				950D8019249ED2CB00BFD6F5 /* InfoCell.m */,
 				950D801A249ED2CB00BFD6F5 /* InfoCell.xib */,
 			);
-			path = cells;
+			path = InfoCell;
+			sourceTree = "<group>";
+		};
+		9514BDB124A1556200D77D8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				955FE3D6249CFC05001B7FCB /* IconView.h */,
+				955FE3D7249CFC05001B7FCB /* IconView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9514BDB224A1557300D77D8B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				95614DA4249C0CF500D65D0C /* UIColor+HexColors.h */,
+				95614DA5249C0CF500D65D0C /* UIColor+HexColors.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		95614D7C249BEA1200D65D0C = {
@@ -97,31 +172,20 @@
 		95614D87249BEA1200D65D0C /* WorkWithUITask6 */ = {
 			isa = PBXGroup;
 			children = (
+				9514BDB224A1557300D77D8B /* Category */,
+				9514BDB124A1556200D77D8B /* Views */,
+				9514BDAF24A1551A00D77D8B /* InfoListViewController */,
+				9514BDAE24A1550000D77D8B /* GalleryViewController */,
+				9514BDAD24A154E300D77D8B /* PhoneInfoViewController */,
+				9514BDAC24A154BF00D77D8B /* FileInfoViewController */,
+				9514BDAB24A1548400D77D8B /* IconViewController */,
 				950D801D249ED2D700BFD6F5 /* cells */,
 				95614D88249BEA1200D65D0C /* AppDelegate.h */,
-				955FE3D6249CFC05001B7FCB /* IconView.h */,
-				955FE3D7249CFC05001B7FCB /* IconView.m */,
 				95614D89249BEA1200D65D0C /* AppDelegate.m */,
-				955FE3D3249CFB85001B7FCB /* IconViewController.h */,
-				950D8013249EB2BF00BFD6F5 /* PhoneInfoViewController.h */,
-				950D8014249EB2BF00BFD6F5 /* PhoneInfoViewController.m */,
-				950D8015249EB2BF00BFD6F5 /* PhoneInfoViewController.xib */,
-				950D800E249EB1EB00BFD6F5 /* GalleryViewController.h */,
-				950D800F249EB1EB00BFD6F5 /* GalleryViewController.m */,
-				950D8010249EB1EB00BFD6F5 /* GalleryViewController.xib */,
-				955FE3D4249CFB85001B7FCB /* IconViewController.m */,
 				95614D94249BEA1300D65D0C /* Assets.xcassets */,
 				95614D96249BEA1300D65D0C /* LaunchScreen.storyboard */,
 				95614D99249BEA1300D65D0C /* Info.plist */,
 				95614D9A249BEA1300D65D0C /* main.m */,
-				95614DA4249C0CF500D65D0C /* UIColor+HexColors.h */,
-				95614DA5249C0CF500D65D0C /* UIColor+HexColors.m */,
-				950D8004249EA24B00BFD6F5 /* FileInfoViewController.h */,
-				950D8009249EA70900BFD6F5 /* InfoListViewController.h */,
-				950D800A249EA70900BFD6F5 /* InfoListViewController.m */,
-				950D800B249EA70900BFD6F5 /* InfoListViewController.xib */,
-				950D8005249EA24B00BFD6F5 /* FileInfoViewController.m */,
-				950D8006249EA24B00BFD6F5 /* FileInfoViewController.xib */,
 			);
 			path = WorkWithUITask6;
 			sourceTree = "<group>";
