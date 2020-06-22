@@ -94,9 +94,10 @@
 
 - (NSString *)stringFromTimeInterval:(NSTimeInterval)timeInterval {
     NSInteger interval = timeInterval;
+    long seconds = interval % 60;
     long minutes = (interval / 60) % 60;
     long hours = (interval / 3600);
-
-    return [NSString stringWithFormat:@"%0.2ld:%0.2ld", hours, minutes];
+    
+    return  (hours < 1) ? [NSString stringWithFormat:@"%02ld:%02ld",  (long)minutes, (long)seconds] : [NSString stringWithFormat:@"%02ld:%02ld:%02ld", (long)hours, (long)minutes, (long)seconds];
 }
 @end

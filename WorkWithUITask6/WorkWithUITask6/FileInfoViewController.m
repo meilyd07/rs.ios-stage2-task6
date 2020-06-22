@@ -28,7 +28,6 @@ int const SHARE_BOTTON_HEIGHT = 55;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor customWhite];
-    self.imageView.image = [UIImage imageNamed:@"temp_img"];
     [self loadData];
     [self setupButton];
     [self setupConstraints];
@@ -40,6 +39,23 @@ int const SHARE_BOTTON_HEIGHT = 55;
 }
 
 - (void)loadData {
+    PHImageRequestOptions *requestOptions = [[PHImageRequestOptions alloc] init];
+    requestOptions.resizeMode   = PHImageRequestOptionsResizeModeExact;
+    requestOptions.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
+
+    requestOptions.synchronous = YES;
+    PHImageManager *manager = [PHImageManager defaultManager];
+    
+    [manager requestImageForAsset:self.assetItem
+       targetSize:CGSizeMake(self.view.frame.size.width - 40, self.view.frame.size.height)
+      contentMode:PHImageContentModeAspectFit
+          options:requestOptions
+    resultHandler:^void(UIImage *image, NSDictionary *info) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.imageView setImage:image];
+        });
+    }];
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"HH:mm:ss dd.MM.yyyy"];
     NSString *dateString = [dateFormatter stringFromDate:self.assetItem.creationDate];
@@ -80,7 +96,9 @@ int const SHARE_BOTTON_HEIGHT = 55;
 }
 
 -(void)shareAction:(UIButton *)button {
-    NSLog(@"TODO share action");
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[self.assetItem] applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[UIActivityTypeSaveToCameraRoll];
+    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 - (void)setupConstraints {
