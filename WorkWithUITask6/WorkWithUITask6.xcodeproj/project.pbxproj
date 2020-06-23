@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950713B424A2364100588B9A /* AssetCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 950713B224A2364100588B9A /* AssetCollectionCell.m */; };
+		950713B524A2364100588B9A /* AssetCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950713B324A2364100588B9A /* AssetCollectionCell.xib */; };
+		950713BA24A25F8600588B9A /* ImagePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950713B824A25F8600588B9A /* ImagePreviewViewController.m */; };
+		950713BB24A25F8600588B9A /* ImagePreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950713B924A25F8600588B9A /* ImagePreviewViewController.xib */; };
 		950D8007249EA24B00BFD6F5 /* FileInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950D8005249EA24B00BFD6F5 /* FileInfoViewController.m */; };
 		950D8008249EA24B00BFD6F5 /* FileInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950D8006249EA24B00BFD6F5 /* FileInfoViewController.xib */; };
 		950D800C249EA70900BFD6F5 /* InfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950D800A249EA70900BFD6F5 /* InfoListViewController.m */; };
 		950D800D249EA70900BFD6F5 /* InfoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950D800B249EA70900BFD6F5 /* InfoListViewController.xib */; };
 		950D8011249EB1EB00BFD6F5 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950D800F249EB1EB00BFD6F5 /* GalleryViewController.m */; };
-		950D8012249EB1EB00BFD6F5 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950D8010249EB1EB00BFD6F5 /* GalleryViewController.xib */; };
 		950D8016249EB2BF00BFD6F5 /* PhoneInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950D8014249EB2BF00BFD6F5 /* PhoneInfoViewController.m */; };
 		950D8017249EB2BF00BFD6F5 /* PhoneInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950D8015249EB2BF00BFD6F5 /* PhoneInfoViewController.xib */; };
 		950D801B249ED2CB00BFD6F5 /* InfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 950D8019249ED2CB00BFD6F5 /* InfoCell.m */; };
@@ -28,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		950713B124A2364100588B9A /* AssetCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetCollectionCell.h; sourceTree = "<group>"; };
+		950713B224A2364100588B9A /* AssetCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetCollectionCell.m; sourceTree = "<group>"; };
+		950713B324A2364100588B9A /* AssetCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetCollectionCell.xib; sourceTree = "<group>"; };
+		950713B724A25F8600588B9A /* ImagePreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagePreviewViewController.h; sourceTree = "<group>"; };
+		950713B824A25F8600588B9A /* ImagePreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagePreviewViewController.m; sourceTree = "<group>"; };
+		950713B924A25F8600588B9A /* ImagePreviewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagePreviewViewController.xib; sourceTree = "<group>"; };
 		950D8004249EA24B00BFD6F5 /* FileInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileInfoViewController.h; sourceTree = "<group>"; };
 		950D8005249EA24B00BFD6F5 /* FileInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileInfoViewController.m; sourceTree = "<group>"; };
 		950D8006249EA24B00BFD6F5 /* FileInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileInfoViewController.xib; sourceTree = "<group>"; };
@@ -36,7 +45,6 @@
 		950D800B249EA70900BFD6F5 /* InfoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoListViewController.xib; sourceTree = "<group>"; };
 		950D800E249EB1EB00BFD6F5 /* GalleryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
 		950D800F249EB1EB00BFD6F5 /* GalleryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
-		950D8010249EB1EB00BFD6F5 /* GalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
 		950D8013249EB2BF00BFD6F5 /* PhoneInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneInfoViewController.h; sourceTree = "<group>"; };
 		950D8014249EB2BF00BFD6F5 /* PhoneInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneInfoViewController.m; sourceTree = "<group>"; };
 		950D8015249EB2BF00BFD6F5 /* PhoneInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneInfoViewController.xib; sourceTree = "<group>"; };
@@ -71,9 +79,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		950713B024A2361500588B9A /* AssetCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				950713B124A2364100588B9A /* AssetCollectionCell.h */,
+				950713B224A2364100588B9A /* AssetCollectionCell.m */,
+				950713B324A2364100588B9A /* AssetCollectionCell.xib */,
+			);
+			path = AssetCollectionCell;
+			sourceTree = "<group>";
+		};
+		950713B624A25F5900588B9A /* ImagePreviewViewController */ = {
+			isa = PBXGroup;
+			children = (
+				950713B724A25F8600588B9A /* ImagePreviewViewController.h */,
+				950713B824A25F8600588B9A /* ImagePreviewViewController.m */,
+				950713B924A25F8600588B9A /* ImagePreviewViewController.xib */,
+			);
+			path = ImagePreviewViewController;
+			sourceTree = "<group>";
+		};
 		950D801D249ED2D700BFD6F5 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				950713B024A2361500588B9A /* AssetCollectionCell */,
 				9514BDB024A1554600D77D8B /* InfoCell */,
 			);
 			path = cells;
@@ -113,7 +142,6 @@
 			children = (
 				950D800E249EB1EB00BFD6F5 /* GalleryViewController.h */,
 				950D800F249EB1EB00BFD6F5 /* GalleryViewController.m */,
-				950D8010249EB1EB00BFD6F5 /* GalleryViewController.xib */,
 			);
 			path = GalleryViewController;
 			sourceTree = "<group>";
@@ -177,6 +205,7 @@
 		95614D87249BEA1200D65D0C /* WorkWithUITask6 */ = {
 			isa = PBXGroup;
 			children = (
+				950713B624A25F5900588B9A /* ImagePreviewViewController */,
 				9514BDB224A1557300D77D8B /* Category */,
 				9514BDB124A1556200D77D8B /* Views */,
 				9514BDAF24A1551A00D77D8B /* InfoListViewController */,
@@ -252,12 +281,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950D8012249EB1EB00BFD6F5 /* GalleryViewController.xib in Resources */,
 				950D801C249ED2CB00BFD6F5 /* InfoCell.xib in Resources */,
 				95614D98249BEA1300D65D0C /* LaunchScreen.storyboard in Resources */,
 				950D8008249EA24B00BFD6F5 /* FileInfoViewController.xib in Resources */,
+				950713BB24A25F8600588B9A /* ImagePreviewViewController.xib in Resources */,
 				950D8017249EB2BF00BFD6F5 /* PhoneInfoViewController.xib in Resources */,
 				950D800D249EA70900BFD6F5 /* InfoListViewController.xib in Resources */,
+				950713B524A2364100588B9A /* AssetCollectionCell.xib in Resources */,
 				95614D95249BEA1300D65D0C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,12 +303,14 @@
 				955FE3D5249CFB85001B7FCB /* IconViewController.m in Sources */,
 				950D8011249EB1EB00BFD6F5 /* GalleryViewController.m in Sources */,
 				95614DA6249C0CF500D65D0C /* UIColor+HexColors.m in Sources */,
+				950713B424A2364100588B9A /* AssetCollectionCell.m in Sources */,
 				950D801B249ED2CB00BFD6F5 /* InfoCell.m in Sources */,
 				950D8016249EB2BF00BFD6F5 /* PhoneInfoViewController.m in Sources */,
 				950D800C249EA70900BFD6F5 /* InfoListViewController.m in Sources */,
 				95614D8A249BEA1200D65D0C /* AppDelegate.m in Sources */,
 				955FE3D8249CFC05001B7FCB /* IconView.m in Sources */,
 				950D8007249EA24B00BFD6F5 /* FileInfoViewController.m in Sources */,
+				950713BA24A25F8600588B9A /* ImagePreviewViewController.m in Sources */,
 				95614D9B249BEA1300D65D0C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
