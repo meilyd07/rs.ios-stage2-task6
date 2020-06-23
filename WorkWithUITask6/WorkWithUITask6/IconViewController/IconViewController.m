@@ -75,27 +75,29 @@ int const BUTTON_HEIGHT = 55;
 -(void)startAction:(UIButton *)button {
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
     UIViewController *infoListVC = [[InfoListViewController alloc] init];
+    UINavigationController *navInfoVC = [[UINavigationController alloc] initWithRootViewController:infoListVC];
     UIViewController *galleryVC = [[GalleryViewController alloc] init];
+    UINavigationController *navGalleryVC = [[UINavigationController alloc] initWithRootViewController:galleryVC];
+    
     UIViewController *phoneInfoVC = [[PhoneInfoViewController alloc] init];
-    NSArray *viewControllers = [NSArray arrayWithObjects:infoListVC, galleryVC, phoneInfoVC, nil];
+    UINavigationController *navPhoneInfoVC = [[UINavigationController alloc] initWithRootViewController:phoneInfoVC];
+    
+    NSArray *viewControllers = [NSArray arrayWithObjects:navInfoVC, navGalleryVC, navPhoneInfoVC, nil];
     [tabBarController setViewControllers:viewControllers animated:NO];
     
-    infoListVC.tabBarItem.image = [UIImage imageNamed:@"info_unselected"];
-    infoListVC.tabBarItem.selectedImage = [UIImage imageNamed:@"info_selected"];
-    galleryVC.tabBarItem.image = [UIImage imageNamed:@"gallery_unselected"];
-    galleryVC.tabBarItem.selectedImage = [UIImage imageNamed:@"gallery_selected"];
-    
-    phoneInfoVC.tabBarItem.image = [UIImage imageNamed:@"home_unselected"];
-    phoneInfoVC.tabBarItem.selectedImage = [UIImage imageNamed:@"home_selected"];
-    
-    //todo
-    tabBarController.navigationItem.hidesBackButton = YES;
-    
-    infoListVC.navigationItem.title = @"Info";
+    navInfoVC.tabBarItem.image = [UIImage imageNamed:@"info_unselected"];
+    navInfoVC.tabBarItem.selectedImage = [UIImage imageNamed:@"info_selected"];
+    navGalleryVC.tabBarItem.image = [UIImage imageNamed:@"gallery_unselected"];
+    navGalleryVC.tabBarItem.selectedImage = [UIImage imageNamed:@"gallery_selected"];
+    navPhoneInfoVC.tabBarItem.image = [UIImage imageNamed:@"home_unselected"];
+    navPhoneInfoVC.tabBarItem.selectedImage = [UIImage imageNamed:@"home_selected"];
 
-    
-    [self.navigationController pushViewController:tabBarController animated:true];
+    if (@available(iOS 13.0, *)) {
+        [tabBarController setModalPresentationStyle:UIModalPresentationFullScreen];
+    }
+    [self presentViewController:tabBarController animated:YES completion:nil];
 }
 
 - (void)setupIconViews {

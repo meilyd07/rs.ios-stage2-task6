@@ -36,7 +36,25 @@ int const SHARE_BOTTON_HEIGHT = 55;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self setupNavigationBar];
+}
+
+-(void)setupNavigationBar {
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+    
+    if (@available(iOS 13, *)) {
+        self.navigationController.navigationBar.standardAppearance = [[UINavigationBarAppearance alloc] init];
+        [self.navigationController.navigationBar.standardAppearance configureWithDefaultBackground];
+        self.navigationController.navigationBar.standardAppearance.backgroundColor = [UIColor customYellow];
+       self.navigationController.navigationBar.standardAppearance.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor customBlack], NSFontAttributeName:[UIFont systemFontOfSize:18 weight:UIFontWeightSemibold]};
+    }
+    else {
+        self.navigationController.navigationBar.barTintColor = [UIColor customYellow];
+        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor customBlack], NSFontAttributeName:[UIFont systemFontOfSize:18 weight:UIFontWeightSemibold]};
+    }
+    self.navigationController.navigationBar.tintColor = [UIColor customBlack];
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationItem.title = [self.assetItem valueForKey:@"filename"];
 }
 
 - (void)loadData {

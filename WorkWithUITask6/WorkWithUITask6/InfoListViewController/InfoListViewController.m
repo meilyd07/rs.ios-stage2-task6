@@ -33,6 +33,11 @@
     [self setupNavigationBar];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationItem.title = @"";
+}
+
 -(void)setupNavigationBar {
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     
@@ -40,17 +45,14 @@
         self.navigationController.navigationBar.standardAppearance = [[UINavigationBarAppearance alloc] init];
         [self.navigationController.navigationBar.standardAppearance configureWithDefaultBackground];
         self.navigationController.navigationBar.standardAppearance.backgroundColor = [UIColor customYellow];
-       self.navigationController.navigationBar.standardAppearance.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor customBlack]};
+       self.navigationController.navigationBar.standardAppearance.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor customBlack], NSFontAttributeName:[UIFont systemFontOfSize:18 weight:UIFontWeightSemibold]};
     }
     else {
         self.navigationController.navigationBar.barTintColor = [UIColor customYellow];
-        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor customBlack]};
+        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor customBlack], NSFontAttributeName:[UIFont systemFontOfSize:18 weight:UIFontWeightSemibold]};
     }
-    self.navigationController.navigationBar.tintColor = [UIColor customBlack];
     self.navigationController.navigationBar.translucent = NO;
-//    self.navigationItem.hidesBackButton = YES;
-//    self.navigationItem.leftBarButtonItem = nil;
-//    self.navigationItem.title = @"Info";
+    self.navigationItem.title = @"Info";
 }
 
 #pragma mark - UITableViewDataSource

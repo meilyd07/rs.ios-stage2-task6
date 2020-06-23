@@ -20,7 +20,7 @@
 }
 
 - (IBAction)tempAction:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
