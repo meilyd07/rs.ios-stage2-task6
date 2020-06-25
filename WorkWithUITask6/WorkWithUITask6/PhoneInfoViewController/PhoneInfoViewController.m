@@ -32,6 +32,7 @@ int const ICONS_SIZE = 70;
     self.view.backgroundColor = [UIColor customWhite];
     [self setupIconViews];
     [self setupButtons];
+    [self setupLabels];
     [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(onRotateDevice) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
@@ -58,6 +59,12 @@ int const ICONS_SIZE = 70;
     [self.circleView animateView];
     [self.rectangleView animateView];
     [self.triangleView animateView];
+}
+
+- (void)setupLabels {
+    self.phoneName.text = [[UIDevice currentDevice] name];
+    self.phoneModel.text = [UIDevice currentDevice].model;
+    self.systemOS.text = [UIDevice currentDevice].systemVersion;
 }
 
 - (void)setupIconViews {

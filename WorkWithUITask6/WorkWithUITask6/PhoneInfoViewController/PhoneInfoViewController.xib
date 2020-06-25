@@ -62,9 +62,6 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="203" id="b2W-fj-Kro"/>
-                                    </constraints>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUA-zo-9sU" userLabel="Divider">
                                     <rect key="frame" x="39" y="187" width="335" height="2"/>
