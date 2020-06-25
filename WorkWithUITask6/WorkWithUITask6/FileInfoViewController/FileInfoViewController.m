@@ -58,22 +58,28 @@ int const SHARE_BOTTON_HEIGHT = 55;
 }
 
 - (void)loadData {
-    PHImageRequestOptions *requestOptions = [[PHImageRequestOptions alloc] init];
-    requestOptions.resizeMode   = PHImageRequestOptionsResizeModeExact;
-    requestOptions.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
-
-    requestOptions.synchronous = YES;
-    PHImageManager *manager = [PHImageManager defaultManager];
-    
-    [manager requestImageForAsset:self.assetItem
-       targetSize:CGSizeMake(self.view.frame.size.width - 40, self.view.frame.size.height)
-      contentMode:PHImageContentModeAspectFit
-          options:requestOptions
-    resultHandler:^void(UIImage *image, NSDictionary *info) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.imageView setImage:image];
-        });
-    }];
+    if ((self.assetItem.mediaType == PHAssetMediaTypeImage) || (self.assetItem.mediaType == PHAssetMediaTypeVideo)) {
+        PHImageRequestOptions *requestOptions = [[PHImageRequestOptions alloc] init];
+        requestOptions.resizeMode   = PHImageRequestOptionsResizeModeExact;
+        requestOptions.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
+        
+        requestOptions.synchronous = YES;
+        PHImageManager *manager = [PHImageManager defaultManager];
+        
+        [manager requestImageForAsset:self.assetItem
+                           targetSize:CGSizeMake(self.view.frame.size.width - 40, self.view.frame.size.height)
+                          contentMode:PHImageContentModeAspectFit
+                              options:requestOptions
+                        resultHandler:^void(UIImage *image, NSDictionary *info) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.imageView setImage:image];
+            });
+        }];
+    } else if (self.assetItem.mediaType == PHAssetMediaTypeAudio) {
+        [self.imageView setImage:[UIImage imageNamed:@"audio_screen"]];
+    } else {
+        [self.imageView setImage:[UIImage imageNamed:@"other_screen"]];
+    }
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"HH:mm:ss dd.MM.yyyy"];
@@ -115,12 +121,14 @@ int const SHARE_BOTTON_HEIGHT = 55;
 }
 
 -(void)shareAction:(UIButton *)button {
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[[self.assetItem getFileURLFromPHAssetResourceDescription]] applicationActivities:nil];
-    
-    activityVC.excludedActivityTypes = @[UIActivityTypeSaveToCameraRoll];
-    activityVC.modalPresentationStyle = UIModalPresentationPopover;
-    activityVC.popoverPresentationController.sourceView = button;
-    [self presentViewController:activityVC animated:YES completion:nil];
+    if ((self.assetItem.mediaType == PHAssetMediaTypeImage) || (self.assetItem.mediaType == PHAssetMediaTypeVideo)) {
+        UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[[self.assetItem getFileURLFromPHAssetResourceDescription]] applicationActivities:nil];
+        
+        activityVC.excludedActivityTypes = @[UIActivityTypeSaveToCameraRoll];
+        activityVC.modalPresentationStyle = UIModalPresentationPopover;
+        activityVC.popoverPresentationController.sourceView = button;
+        [self presentViewController:activityVC animated:YES completion:nil];
+    }
 }
 
 - (void)setupConstraints {

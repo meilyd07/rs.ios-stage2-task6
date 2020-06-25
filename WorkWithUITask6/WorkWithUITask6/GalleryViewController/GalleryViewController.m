@@ -18,6 +18,7 @@
 @interface GalleryViewController () <UICollectionViewDataSource, UICollectionViewDelegate, PHPhotoLibraryChangeObserver, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray<PHAsset *> *assets;
+@property (nonatomic, strong) PHFetchResult *fetchResult;
 @end
 
 @implementation GalleryViewController
@@ -151,20 +152,53 @@
         [NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES],
     ];
     
-    PHFetchResult *allAssetsResults  = [PHAsset fetchAssetsWithOptions:fetchOptions];
-    [allAssetsResults enumerateObjectsUsingBlock:^(id  _Nonnull object, NSUInteger idx, BOOL * _Nonnull stop) {
+    self.fetchResult  = [PHAsset fetchAssetsWithOptions:fetchOptions];
+    [self.fetchResult enumerateObjectsUsingBlock:^(id  _Nonnull object, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([object isKindOfClass:[PHAsset class]]) {
             [self.assets addObject:object];
         }
     }];
-    
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.collectionView reloadData];
     });
 }
 
-- (void)photoLibraryDidChange:(nonnull PHChange *)changeInstance {
-    [self getAssets];
+- (void)photoLibraryDidChange:(PHChange *)changeInstance
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self handleChangedLibrary:changeInstance];
+    });
+}
+
+- (void)handleChangedLibrary:(PHChange *)changeInstance {
+    
+    PHFetchResultChangeDetails *fetchResultChangeDetails = [changeInstance changeDetailsForFetchResult:_fetchResult];
+    if (!fetchResultChangeDetails) {
+        return;
+    }
+
+    self.fetchResult = fetchResultChangeDetails.fetchResultAfterChanges;
+
+    if (![fetchResultChangeDetails hasIncrementalChanges]) {
+        [self getAssets];
+        return;
+    }
+
+    NSArray *insertedObjects = [fetchResultChangeDetails insertedObjects];
+    if (insertedObjects) {
+        for (PHAsset *asset in insertedObjects) {
+            [_assets addObject:asset];
+        }
+        [_collectionView reloadData];
+    }
+    
+    NSArray *deleteObjects = [fetchResultChangeDetails removedObjects];
+    if (insertedObjects) {
+        for (PHAsset *asset in deleteObjects) {
+            [_assets removeObject:asset];
+        }
+        [_collectionView reloadData];
+    }
 }
 
 @end
