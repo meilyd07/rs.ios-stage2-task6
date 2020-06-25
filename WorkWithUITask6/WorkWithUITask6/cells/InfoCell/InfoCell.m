@@ -55,7 +55,7 @@
 
 -(void)setupVideoCell:(PHAsset *)item {
     self.assetTypeImage.image = [UIImage imageNamed:@"video"];
-    self.assetDetailText.text = [NSString stringWithFormat:@"%lu x %lu %@", (unsigned long)item.pixelHeight, item.pixelWidth, [self stringFromTimeInterval:item.duration]];
+    self.assetDetailText.text = [NSString stringWithFormat:@"%lu x %lu %@", item.pixelWidth, (unsigned long)item.pixelHeight, [self stringFromTimeInterval:item.duration]];
     [self setThumbnail:item];
 }
 
@@ -87,7 +87,7 @@
 -(void)setupImageCell:(PHAsset *)item {
     //set icon
     self.assetTypeImage.image = [UIImage imageNamed:@"image"];
-    self.assetDetailText.text = [NSString stringWithFormat:@"%lu x %lu", (unsigned long)item.pixelHeight, item.pixelWidth];
+    self.assetDetailText.text = [NSString stringWithFormat:@"%lu x %lu", item.pixelWidth, (unsigned long)item.pixelHeight];
     
     [self setThumbnail:item];
 }
