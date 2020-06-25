@@ -9,6 +9,7 @@
 #import "PhoneInfoViewController.h"
 #import "IconView.h"
 #import "UIColor+HexColors.h"
+//#import <WebKit/WebKit.h>
 
 int const ICONS_SIZE = 70;
 
@@ -93,7 +94,7 @@ int const ICONS_SIZE = 70;
 }
 
 -(void)openGitAction:(UIButton *)button {
-   
+   [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://meilyd07.github.io/rsschool-cv/cv"] options:@{} completionHandler:nil];
 }
 
 -(void)goToStartAction:(UIButton *)button {
