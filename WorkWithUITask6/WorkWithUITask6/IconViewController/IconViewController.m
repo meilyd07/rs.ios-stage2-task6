@@ -36,12 +36,33 @@ int const BUTTON_HEIGHT = 55;
     [self setupIconViews];
     [self setupButton];
     [self setupConstraints];
+    [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(onRotateDevice) name:UIDeviceOrientationDidChangeNotification object:nil];
+}
+
+-(void)onRotateDevice {
+    [self.iconViewCircle.layer removeAllAnimations];
+    [self.iconViewRectangle.layer removeAllAnimations];
+    [self.iconViewTriangle.layer removeAllAnimations];
+
+    [self.iconViewCircle animateView];
+    [self.iconViewRectangle animateView];
+    [self.iconViewTriangle animateView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.iconViewCircle.layer removeAllAnimations];
+    [self.iconViewRectangle.layer removeAllAnimations];
+    [self.iconViewTriangle.layer removeAllAnimations];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
-    //start animation circle todo
+    
+    [self.iconViewCircle animateView];
+    [self.iconViewRectangle animateView];
+    [self.iconViewTriangle animateView];
 }
 
 - (void)setupDescription {
@@ -94,6 +115,7 @@ int const BUTTON_HEIGHT = 55;
     navPhoneInfoVC.tabBarItem.image = [UIImage imageNamed:@"home_unselected"];
     navPhoneInfoVC.tabBarItem.selectedImage = [UIImage imageNamed:@"home_selected"];
 
+    tabBarController.selectedIndex = 1;
     if (@available(iOS 13.0, *)) {
         [tabBarController setModalPresentationStyle:UIModalPresentationFullScreen];
     }

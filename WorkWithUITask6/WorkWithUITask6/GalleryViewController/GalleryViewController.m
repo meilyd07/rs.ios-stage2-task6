@@ -43,9 +43,9 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([UIDevice currentDevice].orientation == UIDeviceOrientationPortrait) {
-        return CGSizeMake(self.collectionView.bounds.size.width / 3 - 4, self.collectionView.bounds.size.width / 3 - 4);
+        return CGSizeMake(self.collectionView.bounds.size.width / 3 - 8, self.collectionView.bounds.size.width / 3 - 8);
     } else {
-        return CGSizeMake(self.collectionView.bounds.size.width / 4 - 4, self.collectionView.bounds.size.width / 4 - 4);
+        return CGSizeMake(self.collectionView.bounds.size.width / 4 - 8, self.collectionView.bounds.size.width / 4 - 8);
     }
 }
 
@@ -70,9 +70,9 @@
 - (void)createCollectionView {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [layout setSectionInset:UIEdgeInsetsMake(4, 4, 4, 4)];
-    layout.minimumLineSpacing = 0;
-    layout.minimumInteritemSpacing = 0;
+    [layout setSectionInset:UIEdgeInsetsMake(8, 8, 8, 8)];
+    layout.minimumLineSpacing = 8;
+    layout.minimumInteritemSpacing = 4;
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:layout];
     [self.collectionView setDataSource:self];
     [self.collectionView setDelegate:self];
@@ -80,6 +80,12 @@
     UINib *nib = [UINib nibWithNibName:@"AssetCollectionCell" bundle:nil];
     [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"AssetCollectionCell"];
     [self.view addSubview:self.collectionView];
+    
+    self.collectionView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.collectionView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:0].active = YES;
+    [self.collectionView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:0].active = YES;
+    [self.collectionView.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:0].active = YES;
+    [self.collectionView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:0].active = YES;
 }
 
 #pragma mark - UICollectionViewDataSource

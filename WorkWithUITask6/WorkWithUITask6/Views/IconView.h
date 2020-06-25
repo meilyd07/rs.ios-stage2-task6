@@ -19,7 +19,10 @@ typedef NS_ENUM(NSInteger, IconViewType) {
 
 
 @interface IconView : UIView
+@property (nonatomic, assign) IconViewType type;
+@property (nonatomic, strong) UIColor *color;
 -(instancetype)initWithFrame:(CGRect)frame WithType:(IconViewType)type andColor:(UIColor *)color;
+- (void)animateView;
 @end
 
 NS_ASSUME_NONNULL_END

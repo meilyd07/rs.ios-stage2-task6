@@ -8,11 +8,7 @@
 
 #import "IconView.h"
 #import "UIColor+HexColors.h"
-
-@interface IconView()
-@property (nonatomic, assign) IconViewType type;
-@property (nonatomic, strong) UIColor *color;
-@end
+#import <QuartzCore/QuartzCore.h>
 
 @implementation IconView
 
@@ -68,6 +64,51 @@
     CGContextAddLineToPoint(context, rect.size.width / 2, 0);
     CGContextAddLineToPoint(context, 0, rect.size.height);
     CGContextFillPath(context);
+}
+
+-(void)animateCircle {
+    CABasicAnimation *zoomAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    [zoomAnimation setDuration:0.8];
+    [zoomAnimation setRepeatCount:INFINITY];
+    [zoomAnimation setFromValue:[NSNumber numberWithFloat:0.9]];
+    [zoomAnimation setToValue:[NSNumber numberWithFloat:1.1]];
+    [zoomAnimation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+    [[self layer] addAnimation:zoomAnimation forKey:@"zoom"];
+}
+
+-(void)animateRectangle {
+    CABasicAnimation *theAnimation;
+    theAnimation=[CABasicAnimation animationWithKeyPath:@"position"];
+    theAnimation.duration = 1.0;
+    theAnimation.repeatCount = INFINITY;
+
+    theAnimation.fromValue= [NSValue valueWithCGPoint:CGPointMake(self.center.x, self.center.y-7)];
+    theAnimation.toValue= [NSValue valueWithCGPoint:CGPointMake(self.center.x, self.center.y+7)];
+    [theAnimation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    [[self layer] addAnimation:theAnimation forKey:@"animatePosition"];
+}
+
+-(void)animateTriangle {
+    CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.fromValue = [NSNumber numberWithFloat:0.0f];
+    animation.toValue = [NSNumber numberWithFloat: 2*M_PI];
+    animation.duration = 8.0f;
+    animation.repeatCount = INFINITY;
+    [self.layer addAnimation:animation forKey:@"SpinAnimation"];
+}
+
+- (void)animateView {
+    switch (self.type) {
+        case IconViewCircle:
+            [self animateCircle];
+            break;
+        case IconViewRectangle:
+            [self animateRectangle];
+            break;
+        case IconViewTriangle:
+            [self animateTriangle];
+            break;
+    }
 }
 
 @end
