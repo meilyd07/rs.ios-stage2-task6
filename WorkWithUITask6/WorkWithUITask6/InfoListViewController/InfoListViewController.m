@@ -58,7 +58,11 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.assets.count;
+    if (self.assets == nil) {
+        return 0;
+    } else {
+        return self.assets.count;
+    }
 }
 
 
