@@ -78,7 +78,7 @@ int const ICONS_SIZE = 70;
 
     self.triangleView.type = IconViewTriangle;
     self.triangleView.color = [UIColor customGreen];
-    self.triangleView.backgroundColor = [UIColor customWhite];
+    self.triangleView.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setupButtons {

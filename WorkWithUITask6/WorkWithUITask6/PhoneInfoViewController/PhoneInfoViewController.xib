@@ -70,35 +70,22 @@
                                         <constraint firstAttribute="height" constant="2" id="aoC-bT-Omb"/>
                                     </constraints>
                                 </view>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zNK-Ab-rma" userLabel="IconsStackView">
-                                    <rect key="frame" x="39" y="239" width="336" height="70"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1a-DI-D9p" customClass="IconView">
-                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
-                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="70" id="7AK-Lh-13h"/>
-                                                <constraint firstAttribute="height" constant="70" id="vs6-uB-Mm7"/>
-                                            </constraints>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAw-F2-hCP" customClass="IconView">
-                                            <rect key="frame" x="133" y="0.0" width="70" height="70"/>
-                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="70" id="94V-e5-iHt"/>
-                                                <constraint firstAttribute="height" constant="70" id="Cn5-xe-ioa"/>
-                                            </constraints>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4h-bX-41e" customClass="IconView">
-                                            <rect key="frame" x="266" y="0.0" width="70" height="70"/>
-                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="70" id="3Mt-7J-c4h"/>
-                                                <constraint firstAttribute="width" constant="70" id="F1b-GY-OCO"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAw-F2-hCP" customClass="IconView">
+                                    <rect key="frame" x="172" y="239" width="70" height="70"/>
+                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="94V-e5-iHt"/>
+                                        <constraint firstAttribute="height" constant="70" id="Cn5-xe-ioa"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4h-bX-41e" customClass="IconView">
+                                    <rect key="frame" x="305" y="239" width="70" height="70"/>
+                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="3Mt-7J-c4h"/>
+                                        <constraint firstAttribute="width" constant="70" id="F1b-GY-OCO"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDM-ri-OIW" userLabel="Divider">
                                     <rect key="frame" x="39" y="359" width="335" height="2"/>
                                     <color key="backgroundColor" red="0.79216760399999997" green="0.79213756319999995" blue="0.79215794799999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -120,27 +107,37 @@
                                     </constraints>
                                     <state key="normal" title="Open Git CV"/>
                                 </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1a-DI-D9p" customClass="IconView">
+                                    <rect key="frame" x="39" y="239" width="70" height="70"/>
+                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="7AK-Lh-13h"/>
+                                        <constraint firstAttribute="height" constant="70" id="vs6-uB-Mm7"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="I7M-vZ-BXp" firstAttribute="top" secondItem="U0A-Vm-qbC" secondAttribute="bottom" constant="35" id="3UR-Ae-obc"/>
+                                <constraint firstItem="oAw-F2-hCP" firstAttribute="centerX" secondItem="U0A-Vm-qbC" secondAttribute="centerX" id="4qV-ps-R5i"/>
                                 <constraint firstAttribute="trailing" secondItem="I7M-vZ-BXp" secondAttribute="trailing" constant="55" id="5jo-gT-WKF"/>
-                                <constraint firstItem="zNK-Ab-rma" firstAttribute="top" secondItem="CUA-zo-9sU" secondAttribute="bottom" constant="50" id="85Q-pF-tzk"/>
                                 <constraint firstItem="U0A-Vm-qbC" firstAttribute="top" secondItem="ZDM-ri-OIW" secondAttribute="bottom" constant="47" id="APo-dq-7Xv"/>
-                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="U0A-Vm-qbC" secondAttribute="bottom" constant="20" id="ArQ-V7-l3K"/>
                                 <constraint firstAttribute="trailing" secondItem="ZDM-ri-OIW" secondAttribute="trailing" constant="40" id="D8C-0N-4qR"/>
+                                <constraint firstItem="D4h-bX-41e" firstAttribute="firstBaseline" secondItem="oAw-F2-hCP" secondAttribute="firstBaseline" id="DRr-XH-IdU"/>
+                                <constraint firstItem="oAw-F2-hCP" firstAttribute="firstBaseline" secondItem="O1a-DI-D9p" secondAttribute="firstBaseline" id="GB5-D5-ZOd"/>
                                 <constraint firstItem="U0A-Vm-qbC" firstAttribute="leading" secondItem="0vV-iB-5wZ" secondAttribute="leading" constant="55" id="K77-pv-6Z0"/>
                                 <constraint firstItem="ZDM-ri-OIW" firstAttribute="leading" secondItem="0vV-iB-5wZ" secondAttribute="leading" constant="39" id="MqY-9U-GJS"/>
-                                <constraint firstAttribute="trailing" secondItem="zNK-Ab-rma" secondAttribute="trailing" constant="39" id="TKD-MK-fX1"/>
-                                <constraint firstItem="zNK-Ab-rma" firstAttribute="leading" secondItem="0vV-iB-5wZ" secondAttribute="leading" constant="39" id="XFI-i1-yy9"/>
+                                <constraint firstAttribute="trailing" secondItem="D4h-bX-41e" secondAttribute="trailing" constant="39" id="OYA-9F-AYD"/>
                                 <constraint firstItem="XQg-Fu-prv" firstAttribute="leading" secondItem="0vV-iB-5wZ" secondAttribute="leading" constant="49" id="Zqg-zA-9eC"/>
                                 <constraint firstItem="SCd-oq-ErD" firstAttribute="top" secondItem="0vV-iB-5wZ" secondAttribute="top" constant="60" id="aaB-rB-tp0"/>
                                 <constraint firstAttribute="trailing" secondItem="CUA-zo-9sU" secondAttribute="trailing" constant="40" id="clO-Yw-7Ce"/>
+                                <constraint firstItem="O1a-DI-D9p" firstAttribute="leading" secondItem="0vV-iB-5wZ" secondAttribute="leading" constant="39" id="dsN-Lx-6vS"/>
                                 <constraint firstItem="I7M-vZ-BXp" firstAttribute="leading" secondItem="0vV-iB-5wZ" secondAttribute="leading" constant="55" id="hZ8-sU-0TK"/>
                                 <constraint firstItem="CUA-zo-9sU" firstAttribute="top" secondItem="SCd-oq-ErD" secondAttribute="bottom" constant="28" id="koN-R4-sPf"/>
                                 <constraint firstAttribute="trailing" secondItem="U0A-Vm-qbC" secondAttribute="trailing" constant="55" id="lhY-xo-4bf"/>
                                 <constraint firstItem="CUA-zo-9sU" firstAttribute="leading" secondItem="0vV-iB-5wZ" secondAttribute="leading" constant="39" id="oi1-yc-NKs"/>
-                                <constraint firstItem="ZDM-ri-OIW" firstAttribute="top" secondItem="zNK-Ab-rma" secondAttribute="bottom" constant="50" id="uCV-6K-tu3"/>
+                                <constraint firstItem="O1a-DI-D9p" firstAttribute="centerY" secondItem="CUA-zo-9sU" secondAttribute="bottom" constant="85" id="rEP-5M-XaY"/>
+                                <constraint firstItem="ZDM-ri-OIW" firstAttribute="top" secondItem="O1a-DI-D9p" secondAttribute="centerY" constant="85" id="uX5-R6-ExP"/>
                             </constraints>
                         </view>
                     </subviews>
