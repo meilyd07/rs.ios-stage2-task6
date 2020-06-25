@@ -30,7 +30,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vV-iB-5wZ" userLabel="ContentView">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="573"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SCd-oq-ErD" userLabel="InfoStackView">
                                     <rect key="frame" x="49" y="60" width="203" height="99"/>
@@ -70,6 +70,14 @@
                                         <constraint firstAttribute="height" constant="2" id="aoC-bT-Omb"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1a-DI-D9p" customClass="IconView">
+                                    <rect key="frame" x="39" y="239" width="70" height="70"/>
+                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="7AK-Lh-13h"/>
+                                        <constraint firstAttribute="height" constant="70" id="vs6-uB-Mm7"/>
+                                    </constraints>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAw-F2-hCP" customClass="IconView">
                                     <rect key="frame" x="172" y="239" width="70" height="70"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -93,13 +101,6 @@
                                         <constraint firstAttribute="height" constant="2" id="vtb-8z-Qs3"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7M-vZ-BXp">
-                                    <rect key="frame" x="55" y="498" width="304" height="55"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="55" id="lsF-Ra-y7q"/>
-                                    </constraints>
-                                    <state key="normal" title="Go to start!"/>
-                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0A-Vm-qbC">
                                     <rect key="frame" x="55" y="408" width="304" height="55"/>
                                     <constraints>
@@ -107,16 +108,15 @@
                                     </constraints>
                                     <state key="normal" title="Open Git CV"/>
                                 </button>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1a-DI-D9p" customClass="IconView">
-                                    <rect key="frame" x="39" y="239" width="70" height="70"/>
-                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7M-vZ-BXp">
+                                    <rect key="frame" x="55" y="498" width="304" height="55"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="70" id="7AK-Lh-13h"/>
-                                        <constraint firstAttribute="height" constant="70" id="vs6-uB-Mm7"/>
+                                        <constraint firstAttribute="height" constant="55" id="lsF-Ra-y7q"/>
                                     </constraints>
-                                </view>
+                                    <state key="normal" title="Go to start!"/>
+                                </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="I7M-vZ-BXp" firstAttribute="top" secondItem="U0A-Vm-qbC" secondAttribute="bottom" constant="35" id="3UR-Ae-obc"/>
                                 <constraint firstItem="oAw-F2-hCP" firstAttribute="centerX" secondItem="U0A-Vm-qbC" secondAttribute="centerX" id="4qV-ps-R5i"/>
@@ -126,6 +126,7 @@
                                 <constraint firstItem="D4h-bX-41e" firstAttribute="firstBaseline" secondItem="oAw-F2-hCP" secondAttribute="firstBaseline" id="DRr-XH-IdU"/>
                                 <constraint firstItem="oAw-F2-hCP" firstAttribute="firstBaseline" secondItem="O1a-DI-D9p" secondAttribute="firstBaseline" id="GB5-D5-ZOd"/>
                                 <constraint firstItem="U0A-Vm-qbC" firstAttribute="leading" secondItem="0vV-iB-5wZ" secondAttribute="leading" constant="55" id="K77-pv-6Z0"/>
+                                <constraint firstAttribute="bottom" secondItem="I7M-vZ-BXp" secondAttribute="bottom" constant="20" id="LfU-Qz-zhu"/>
                                 <constraint firstItem="ZDM-ri-OIW" firstAttribute="leading" secondItem="0vV-iB-5wZ" secondAttribute="leading" constant="39" id="MqY-9U-GJS"/>
                                 <constraint firstAttribute="trailing" secondItem="D4h-bX-41e" secondAttribute="trailing" constant="39" id="OYA-9F-AYD"/>
                                 <constraint firstItem="XQg-Fu-prv" firstAttribute="leading" secondItem="0vV-iB-5wZ" secondAttribute="leading" constant="49" id="Zqg-zA-9eC"/>
@@ -141,6 +142,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="0vV-iB-5wZ" firstAttribute="top" secondItem="KMj-5b-DPV" secondAttribute="top" id="6cG-lT-Qdy"/>
                         <constraint firstItem="0vV-iB-5wZ" firstAttribute="trailing" secondItem="KMj-5b-DPV" secondAttribute="trailing" id="8vu-xz-fcn"/>
@@ -151,12 +153,11 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="height" secondItem="0vV-iB-5wZ" secondAttribute="height" priority="250" id="36O-u5-kG2"/>
                 <constraint firstItem="KMj-5b-DPV" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="4v7-ZS-Yrg"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="width" secondItem="0vV-iB-5wZ" secondAttribute="width" id="HBw-jH-eUU"/>
                 <constraint firstItem="KMj-5b-DPV" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="MJW-bM-OTf"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="KMj-5b-DPV" secondAttribute="bottom" id="QQP-bk-XN2"/>
                 <constraint firstItem="KMj-5b-DPV" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="ZXb-VN-aAI"/>
-                <constraint firstAttribute="width" secondItem="0vV-iB-5wZ" secondAttribute="width" id="mvv-o4-cxs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="137.68115942028987" y="148.66071428571428"/>
