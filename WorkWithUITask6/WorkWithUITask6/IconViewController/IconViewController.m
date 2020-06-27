@@ -37,6 +37,20 @@ int const BUTTON_HEIGHT = 55;
     [self setupButton];
     [self setupConstraints];
     [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(onRotateDevice) name:UIDeviceOrientationDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(onEnterBackgroud) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(onEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
+}
+
+-(void)onEnterBackgroud {
+    [self.iconViewCircle.layer removeAllAnimations];
+    [self.iconViewRectangle.layer removeAllAnimations];
+    [self.iconViewTriangle.layer removeAllAnimations];
+}
+
+-(void)onEnterForeground {
+    [self.iconViewCircle animateView];
+    [self.iconViewRectangle animateView];
+    [self.iconViewTriangle animateView];
 }
 
 -(void)onRotateDevice {

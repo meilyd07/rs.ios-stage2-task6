@@ -34,7 +34,21 @@ int const ICONS_SIZE = 70;
     [self setupButtons];
     [self setupLabels];
     [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(onRotateDevice) name:UIDeviceOrientationDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(onEnterBackgroud) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(onEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
+
+    -(void)onEnterBackgroud {
+        [self.circleView.layer removeAllAnimations];
+        [self.rectangleView.layer removeAllAnimations];
+        [self.triangleView.layer removeAllAnimations];
+    }
+
+    -(void)onEnterForeground {
+        [self.circleView animateView];
+        [self.rectangleView animateView];
+        [self.triangleView animateView];
+    }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
